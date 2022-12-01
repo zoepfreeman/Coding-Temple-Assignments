@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<style>
+* {
+	font-family: Arial, sans-serif;
+    color:#404040;
+}
+fieldset {
+	border: 1px solid lightgrey;
+    padding: 10px 20px 20px;
+    border-radius: 2px;
+    }
+fieldset p{
+    margin: 0px 0px 8px;
+    font-size:1.5em;
+    }
+div {
+	margin: 0px 0px 50px;
+    padding: 60px 100px 50px;
+    border-bottom: 1px solid grey;
+    }
+label {
+	font-size: 0.7em;
+    color: grey;
+    }
+input {
+	width: 100%;
+  padding: 5px 5px;
+  margin: 3px 0px 10px;
+  box-sizing: border-box;
+  color: silver;
+  border: 1px solid grey;
+  border-radius: 2px;
+    }
+input[type=button] {
+  background-color: #f9bc06;
+  border: 1px solid grey;
+  color: black;
+  font-size: 0.7em;
+  margin: 8px 0;
+  cursor: pointer;
+  }
+
+input#go:hover {
+	background-color: orange;
+    }
+a.blue:link, a.blue:visited {
+	color: blue;
+  text-align: center;
+  text-decoration: none;
+  font-size:0.7em;
+  }
+
+a.blue:hover, a.blue:active {
+  text-decoration: underline;
+}
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  display: table;
+  font-size: 0.7em;
+}
+
+li {
+	
+  float: left;
+}
+
+li a {
+  color: blue;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+	color:#ff8000;
+  text-decoration: underline;
+}
+	
+</style>
+</head>
+<p
+style="width:103px; height:31px; display:table; margin: 40px auto 0;background-color:lightgrey; font-size:0.5em; text-align:center">
+103 x 31</p> 
+<div>
+<form>
+  <fieldset>
+  	<p>Sign In</p>
+    <label for="fname">Email(phone or mobile accounts)</label><br>
+    <input type="text" id="fname" name="fname" value="Enter Email"><br>
+    <label for="lname">	Password</label>
+    <a href=# class="blue" for="lname" style="float:right">Forgot Password</a>
+    <input type="text" id="lname" name="lname" value="Enter Password"><br><br>
+    <a href=# class="blue" for="lname">	&#8227; Need Help?</a>
+    <input type="button" id="go" value="Continue">
+  </fieldset>
+</form>
+<p style="color: silver; text-align:center; font-size: 0.8em">New to Amazon?</p>
+<button style="width:100%; cursor:pointer; font-size:0.7em; padding: 5px 5px" onclick=#>Create Your Amazon Account</button>
+</div>
+<ul>
+  <li><a href=#>Conditions of Use</a></li>
+  <li><a href=#>Privacy Policy</a></li>
+  <li><a href=#>Help</a></li>
+</ul><br>
+<p style="font-size:0.5em; text-align:center">&copy; 1996-2022, Amazon.com,inc or its affiliates</p>
+<br><br>
+</body>
+</html>
+
