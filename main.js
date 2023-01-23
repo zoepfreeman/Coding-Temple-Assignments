@@ -1,51 +1,61 @@
-//==================Exercise #1 ==========//
 /*
-    Given the array [1, 2, 3, 5, 6, 7],  find the index of the first non-consecutive element in the array.
-    It should log out 3 because the array at index 3 is 5 which is not consecutive.
+    Exercise 1: Write a function called toCelcius that takes in a number representing 
+    temperature in Fahrenheit and converts the number into Celcius.
+
+    Ex 1. toCelcius(32) // 0
+    Ex 2. toCelcius(212) // 100
+    Ex 3. toCelcius(50) // 10
 */
 
 
-let exerciseOneArr = [1, 2, 3, 5, 6, 7];
-let last=0
-for (let n in exerciseOneArr){
-    if (last!=exerciseOneArr[n]-1){
-        console.log(n);
-    };
-    last=exerciseOneArr[n];
-};
+function toCelcius(temp){
+    return (temp-32)*(5/9);
+}
 
 
 
-//============Exercise #2 ============//
 /*
-Given the two array of numbers below, loop through them both individually and the sum all of the positives elements.
+    Exercise 2: Create a class for a User that sets username and password property
+    on creation. Add a method to change the user's password. The method should take in 
+    the old password and new password. If the old password is wrong do not reset the password.
+    Create an instance of the new user and then change their password using the method.
+*/
+class User{
+    constructor(username, password){
+        this.username = username;
+        this.password = password;
+    }
+    changePassword(oldpass,newpass){
+        if (oldpass === this.password){
+            this.password = newpass;
+            console.log(`Passoword has been changed from ${oldpass} to ${this.password}`);
+        } else {
+            console.log(`Incorrect Password`)
+        };
+        };
+    }
 
-Example 1:
-Input: [10, 12, -9, 3, -1, 0, 15] 
-Output: 40
-Explain: 10 + 12 + 3 + 15 = 40
 
-Example 2:
-Input: [3, 5, 7, 9, -10, 2, -22, -1] 
-Output: 26
+let zoe = new User('Zoe','123')
+console.log(zoe)
+zoe.changePassword('123','1234')
 
-Note: if there is nothing to sum, the sum is default to 0.
+
+/*
+    Exercise 3: Write a function that takes in an array of integers and returns
+    an array of the negative integers squared using Array methods
+
+    Ex 1. squareNegatives([-10, -3, 4, -2, 8, 9, -3]) // [100, 9, 4, 9]
+    Ex 2. squareNegatives([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]) // [25, 16, 9, 4, 1]
+    Ex 3. squareNegatives([2, 4, 6, 8, 10]) // []
 */
 
-let numbers1 = [10, 12, -9, 3, -1, 0, 15];
-let sum1=0;
-for (let i of numbers1){
-    if (i>=0){
-        sum1+=i;
-    };
-};
-console.log(sum1);
-
-let numbers2 = [3, 5, 7, 9, -10, 2, -22, -1];
-let sum2=0;
-for (let i of numbers2){
-    if (i>=0){
-        sum2+=i;
-    };
-};
-console.log(sum2);
+function squareNegatives(arr){
+    let negatives=[];
+    for (let num of arr){
+        if (num < 0){
+            negatives.push(num**2);
+        }
+    }
+    return negatives
+}
